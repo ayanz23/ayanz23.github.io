@@ -7,22 +7,22 @@ redirect_from:
   - /about.html
 ---
 
-🎓 I am a graduate from the Academy for Information Technology and a freshman studying Computer Science at Rutgers.
+🎓 I am a graduate from the Academy for Information Technology and a freshman studying Computer Science at Rutgers
 
-🧑🏽‍💻 My interests span software development and creating impactful applications that drive innovation.
+🧑🏽‍💻 My interests span software development and creating impactful applications that drive innovation
 
-📚 I’m excited to dive deeper into courses like Data Structures, Computer Architecture, Linear Algebra, and Discrete Structures.
+📚 I’m excited to dive deeper into courses like Data Structures, Computer Architecture, Linear Algebra, and Discrete Structures
 
 # Selected Experience
 
-## 🧑🏽‍🍳 Customer Service and Leadership
+## 🧑🏽‍🍳 Work Experience
 I work as a student server at Erickson Senior Living, where I ensure smooth restaurant operations, help train new employees, and provide quality service to hundreds of residents daily.
 
 ## 💻 Computer Science Projects
-During high school, I explored my passion for application development, creating iOS applications that focused on improving user experiences, such as educational tools and utility apps. I also contributed to various school projects, including collaborative efforts in game design and robotics applications. At Rutgers, I plan to expand on this foundation by developing more sophisticated software solutions and working on impactful academic projects.
+During high school, I explored my passion for software development, creating applications that focused on improving user experiences, such as educational tools and utility apps. I also contributed to various school projects, including collaborative efforts in game design. At Rutgers, I plan to expand on this foundation by developing more sophisticated software solutions and working on impactful academic projects.
 
 ## 🏆 Competitions and Leadership
-As former member of the Future Business Leaders of America, I led a team to win first place in state-level animation competitions in 2022 and 2023, advancing to the national finals both years.
+As a former member of Future Business Leaders of America, I led my team to win first place in state level animation competitions in 2022 and 2023, advancing to the national finals both years.
 
 ## 🔧 Skills and Certifications
 Programming Languages: Java, Swift (iOS), Python, SQL, Kotlin, GDScript, HTML/CSS

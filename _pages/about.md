@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-🎓 I am a graduate from the Academy for Information Technology and a freshman currently studying at Rutgers Honors intending to get a BS in Computer Science and a minor in Statistics
+🎓 I am a graduate from the Academy for Information Technology and a freshman currently studying at Rutgers Honors intending to get a BS in Computer Science and Data Science
 
 🧑🏽‍💻 My interests span software development and creating impactful applications that drive innovation
 

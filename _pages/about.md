@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-🎓 I am a graduate from the Academy for Information Technology and a freshman currently studying at Rutgers Honors intending to get a BS in Computer Science and Data Science
+🎓 I am a graduate from the Academy for Information Technology and a second year student currently studying at Rutgers Honors intending to get a BS in Computer Science and Data Science
 
 🧑🏽‍💻 My interests span software development and creating impactful applications that drive innovation
 
@@ -25,5 +25,5 @@ During high school, I explored my passion for software development, creating iOS
 As a former member of Future Business Leaders of America in high school, I led my team to win first place in state level digital animation competitions in 2022 and 2023, advancing to the national finals in both years.
 
 ## 🔧 Skills and Certifications
-Programming Languages: Java, Swift (iOS), Python, C, HTML, CSS, JavaScript, SQL, GDScript, Kotlin
+Programming Languages: Java, Swift (iOS), Python, C, HTML, CSS, JavaScript, SQL, GDScript, Kotlin  
 Certifications: Oracle Java Foundations, Oracle Database Foundations, CompTIA ITF+, Microsoft Office Specialist

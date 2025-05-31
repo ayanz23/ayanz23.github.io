@@ -16,13 +16,13 @@
   <article class="archive__item card" itemscope itemtype="http://schema.org/CreativeWork">
     <a href="{{ base_path }}{{ post.url }}" class="card__link" style="text-decoration: none;">
       <div class="archive__item-content">
-
-        <!-- IMAGE FIRST -->
+        
+        <!-- IMAGE FIRST ON DESKTOP -->
         <div class="archive__item-image">
-          <img src="{{ post.image }}" alt="" width="100%">
+          <img src="{{ post.image }}" alt="" style="width: 100%; height: auto;">
         </div>
 
-        <!-- TEXT SECOND -->
+        <!-- TEXT SECOND ON DESKTOP -->
         <div class="archive__item-text">
           <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
@@ -35,7 +35,7 @@
           {% elsif post.collection == 'publications' %}
             <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif post.date %}
-            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
           {% endif %}
 
           {% if post.excerpt and site.read_more != 'enabled' %}
@@ -44,6 +44,7 @@
             <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
           {% endif %}
         </div>
+
       </div>
     </a>
   </article>
@@ -53,44 +54,38 @@
 .archive__item-content {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin: 1em 1em 1em;
+  flex-wrap: nowrap;
   align-items: center;
+  margin: 1em 1em 1em;
+  gap: 1.5rem;
 }
 
 .archive__item-image {
   flex: 1;
-  order: 1; /* Image first */
+  order: 1;
+  max-width: 300px;
 }
 
 .archive__item-text {
-  flex: 1;
-  order: 2; /* Text second */
-  text-align: center;
-  margin: 0.5em 0.5em 0.5em;
+  flex: 2;
+  order: 2;
+  text-align: left;
+  margin: 0.5em;
 }
 
 @media (max-width: 768px) {
-  .archive__item-text {
-    order: 2;
-  }
-
-  .archive__item-image {
-    order: 1;
-  }
-}
-
-@media (max-width: 400px) {
   .archive__item-content {
     flex-direction: column;
   }
 
   .archive__item-image {
     order: 1;
+    max-width: 100%;
   }
 
   .archive__item-text {
     order: 2;
+    text-align: center;
   }
 }
 

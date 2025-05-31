@@ -7,8 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-
-{% for post in site.portfolio %}
+{% assign portfolio = site.portfolio | sort: 'order' %}
+{% for post in portfolio %}
   {% include portfolio-page.html %}
 {% endfor %}
-

@@ -12,34 +12,36 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item project-card">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <a href="{{ base_path }}{{ post.url }}" class="project-card__link">
-      <div class="project-card__content">
-        
-        {% if post.image %}
-        <div class="project-card__image">
-          <img src="{{ post.image }}" alt="Project image for {{ title }}">
-        </div>
-        {% endif %}
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item card" itemscope itemtype="http://schema.org/CreativeWork">
+    <a href="{{ base_path }}{{ post.url }}" class="card__link" style="text-decoration: none;">
+      <div class="archive__item-content">
 
-        <div class="project-card__text">
-          <h3 class="project-card__title" itemprop="headline">{{ title }}</h3>
+        <!-- IMAGE FIRST -->
+        <div class="archive__item-image">
+          <img src="{{ post.image }}" alt="" width="100%">
+        </div>
+
+        <!-- TEXT SECOND -->
+        <div class="archive__item-text">
+          <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
           {% if post.read_time %}
-            <p class="project-card__meta"><i class="fa fa-clock-o"></i> {% include read-time.html %}</p>
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
 
           {% if post.collection == 'teaching' %}
-            <p class="project-card__meta">{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+            <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif post.collection == 'publications' %}
-            <p class="project-card__meta">Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+            <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif post.date %}
-            <p class="project-card__meta"><i class="fa fa-fw fa-calendar"></i> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
           {% endif %}
 
-          {% if post.excerpt %}
-            <p class="project-card__excerpt">{{ post.excerpt | markdownify | strip_html }}</p>
+          {% if post.excerpt and site.read_more != 'enabled' %}
+            <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+          {% elsif post.excerpt and site.read_more == 'enabled' %}
+            <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
           {% endif %}
         </div>
       </div>
@@ -48,81 +50,68 @@
 </div>
 
 <style>
-.project-card {
-  margin: 1.5rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #f9f9f9;
-  transition: box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0;
-}
-
-.project-card__link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.project-card__content {
+.archive__item-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em 1em 1em;
   align-items: center;
-  padding: 1rem;
-  gap: 1.25rem;
 }
 
-.project-card__image img {
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.project-card__text {
+.archive__item-image {
   flex: 1;
+  order: 1; /* Image first */
 }
 
-.project-card__title {
-  font-size: 1.1rem;
-  margin: 0 0 0.4rem 0;
-  font-weight: 600;
-  color: #2c2c2c;
+.archive__item-text {
+  flex: 1;
+  order: 2; /* Text second */
+  text-align: center;
+  margin: 0.5em 0.5em 0.5em;
 }
 
-.project-card__meta {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.3rem;
-}
-
-.project-card__excerpt {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.4;
-}
-
-.project-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
-  .project-card__content {
+  .archive__item-text {
+    order: 2;
+  }
+
+  .archive__item-image {
+    order: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .archive__item-content {
     flex-direction: column;
-    align-items: flex-start;
   }
 
-  .project-card__image img {
-    width: 100%;
-    height: auto;
+  .archive__item-image {
+    order: 1;
   }
 
-  .project-card__title {
-    font-size: 1rem;
+  .archive__item-text {
+    order: 2;
   }
+}
 
-  .project-card__excerpt {
-    font-size: 0.9rem;
-  }
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card__link:hover .archive__item-title,
+.card__link:hover .archive__item-excerpt {
+  color: inherit;
 }
 </style>

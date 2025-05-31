@@ -1,0 +1,128 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item project-card">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <a href="{{ base_path }}{{ post.url }}" class="project-card__link">
+      <div class="project-card__content">
+        
+        {% if post.image %}
+        <div class="project-card__image">
+          <img src="{{ post.image }}" alt="Project image for {{ title }}">
+        </div>
+        {% endif %}
+
+        <div class="project-card__text">
+          <h3 class="project-card__title" itemprop="headline">{{ title }}</h3>
+
+          {% if post.read_time %}
+            <p class="project-card__meta"><i class="fa fa-clock-o"></i> {% include read-time.html %}</p>
+          {% endif %}
+
+          {% if post.collection == 'teaching' %}
+            <p class="project-card__meta">{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+          {% elsif post.collection == 'publications' %}
+            <p class="project-card__meta">Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+          {% elsif post.date %}
+            <p class="project-card__meta"><i class="fa fa-fw fa-calendar"></i> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+          {% endif %}
+
+          {% if post.excerpt %}
+            <p class="project-card__excerpt">{{ post.excerpt | markdownify | strip_html }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+  </article>
+</div>
+
+<style>
+.project-card {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.project-card__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.25rem;
+}
+
+.project-card__image img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project-card__text {
+  flex: 1;
+}
+
+.project-card__title {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem 0;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.project-card__meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.project-card__excerpt {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .project-card__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card__image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card__title {
+    font-size: 1rem;
+  }
+
+  .project-card__excerpt {
+    font-size: 0.9rem;
+  }
+}
+</style>

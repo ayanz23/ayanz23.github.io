@@ -25,5 +25,5 @@ During high school, I explored my passion for software development, creating iOS
 As a former member of Future Business Leaders of America in high school, I led my team to win first place in state level digital animation competitions in 2022 and 2023, advancing to the national finals in both years.
 
 ## 🔧 Skills and Certifications
-Programming Languages: Java, Swift (iOS), Python, C, HTML, CSS, JavaScript, SQL, GDScript, Kotlin  
+Programming Languages: Java, Swift, Python, C, HTML/CSS, JavaScript, RISC-V Assembly, SQL, GDScript, Kotlin
 Certifications: Oracle Java Foundations, Oracle Database Foundations, CompTIA ITF+, Microsoft Office Specialist

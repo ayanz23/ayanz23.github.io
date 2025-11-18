@@ -29,3 +29,8 @@ Programming Languages: Java, Swift, Python, C, HTML/CSS, JavaScript, TypeScript,
 Frameworks & Libraries: React, Node.js, Next.js, MediaPipe, OpenCV, NumPy, Pandas, Scikit-learn, Matplotlib  
 Tools & Platforms: Git, CocoaPods, Docker, VS Code, Xcode, Insomnia  
 Certifications: Oracle Java Foundations, Oracle Database Foundations, CompTIA ITF+, Microsoft Office Specialist  
+
+<iframe width="157" height="280" src="https://www.youtube.com/embed/WR9suuXiy58" 
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

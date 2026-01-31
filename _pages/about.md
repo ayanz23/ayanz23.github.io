@@ -11,12 +11,13 @@ redirect_from:
 
 🧑🏽‍💻 My interests span software development and creating impactful applications that drive innovation
 
-📚 Throughout my journey, I have already taken courses such as Data Structures & Algorithms, Computer Architecture, Linear Algebra, and Discrete Structures, and I’m excited to dive deeper into courses like Design and Analysis of Computer Algorithms
+📚 Throughout my journey, I have already taken courses such as Data Structures, Design and Analysis of Computer Algorithms, Computer Architecture, Numerical
+Analysis and Computing, Data Management for Data Science, Discrete Structures, Statistics, and Linear Algebra
 
 # Experience
 
 ## 🧑🏽‍🍳 Work Experience
-I work as a student server at Erickson Senior Living, a senior residence facility in my community. I ensure smooth restaurant operations, help train new employees, and provide quality service to hundreds of residents daily.
+I used to work as a student server at Erickson Senior Living, a senior residence facility in my community. I ensured smooth restaurant operations, helped train new employees, and provided quality service to hundreds of residents daily.
 
 ## 💻 Computer Science Projects
 During high school, I explored my passion for software development, creating iOS applications that focused on improving user experiences, such as educational tools and utility apps. I also contributed to various school projects, including collaborative efforts in game design, and application development. At Rutgers, I plan to expand on this foundation by developing more sophisticated software solutions and working on impactful academic projects.
@@ -25,12 +26,12 @@ During high school, I explored my passion for software development, creating iOS
 As a former member of Future Business Leaders of America in high school, I led my team to win first place in state level digital animation competitions in 2022 and 2023, advancing to the national finals in both years.
 
 ## 🔧 Skills and Certifications
-Programming Languages: Java, Swift, Python, C, HTML/CSS, JavaScript, TypeScript, RISC-V Assembly, SQL, GDScript, Kotlin  
+Programming Languages: Java, Swift, Python, C, HTML/CSS, JavaScript, TypeScript, RISC-V Assembly, SQL, PostgreSQL, GDScript, Kotlin  
 Frameworks & Libraries: React, Node.js, Next.js, MediaPipe, OpenCV, NumPy, Pandas, Scikit-learn, Matplotlib  
-Tools & Platforms: Git, CocoaPods, Docker, VS Code, Xcode, Insomnia  
+Tools & Platforms: Git, AWS, Firebase, Supabase, MongoDB, VS Code, Xcode, CocoaPods, Android Studio Code, Insomnia, Jupyter Notebook, Docker  
 Certifications: Oracle Java Foundations, Oracle Database Foundations, CompTIA ITF+, Microsoft Office Specialist  
 
-<iframe width="157" height="280" src="https://www.youtube.com/embed/WR9suuXiy58" 
+<iframe width="112" height="200" src="https://www.youtube.com/embed/WR9suuXiy58" 
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -31,7 +31,6 @@ Frameworks & Libraries: React, Node.js, Next.js, MediaPipe, OpenCV, NumPy, Panda
 Tools & Platforms: Git, AWS, Firebase, Supabase, MongoDB, VS Code, Xcode, CocoaPods, Android Studio Code, Insomnia, Jupyter Notebook, Docker  
 Certifications: Oracle Java Foundations, Oracle Database Foundations, CompTIA ITF+, Microsoft Office Specialist  
 
-<iframe width="112" height="200" src="https://www.youtube.com/embed/WR9suuXiy58" 
-    title="YouTube video player" frameborder="0"
+<iframe width="84" height="150" src="https://www.youtube.com/embed/WR9suuXiy58"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

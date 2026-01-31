@@ -201,6 +201,13 @@ figure {
     transition: $global-transition;
   }
 
+  iframe[src*="youtube.com"] {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
   > a {
     display: block;
   }
